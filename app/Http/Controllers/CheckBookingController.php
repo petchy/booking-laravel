@@ -24,7 +24,7 @@ class CheckBookingController extends Controller
     {
         $request->validate([
             'room_type_id' => 'required',
-            'date' => 'required'
+            'date' => 'required|date_format:Y-m-d'
         ]);
 
         $params = array();
